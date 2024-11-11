@@ -8,6 +8,8 @@ Note: You are not actually sorting the dictionary, but creating a new list from 
 sorting those
 (3 points)
 """
+
+
 sortMe = {
     1: -2, 
     2: 6, 
@@ -24,10 +26,21 @@ sortMe = {
     20: 3
   }
 
+
 keys = []
 values = []
 
+for key in sortMe:
+  val = sortMe[key] # give dictionary a key, it will return the value
+  keys.append(key)
+  values.append(val)
+#  print(key, ":", val)
+keys.sort()
+values.sort()
 
-
+print (keys)
+print (values)
 assert keys == [1, 2, 4, 6, 9, 10, 11, 13, 14, 15, 17, 18, 20]
 assert values == [-2, -2, -1, 0, 0, 0, 1, 2, 3, 3, 3, 4, 6]
+
+ 
