@@ -50,15 +50,15 @@ while True:
     if (second_word_in_cmd.isnumeric()):
         num_wanted = int(second_word_in_cmd)
         item_wanted = cmd_list[2]
-    else:     
+    else:   # no number in command  
         num_wanted = 1
         item_wanted = cmd_list[1]
     #print (item_wanted)
-    cnt_in_inv = inventory[item_wanted]
+    num_in_inv = inventory[item_wanted]
     if (action == "get"):
-        inventory[item_wanted] = cnt_in_inv + num_wanted
-    else:    
-        inventory[item_wanted] = cnt_in_inv - num_wanted
+        inventory[item_wanted] = num_in_inv + num_wanted
+    else:    #action == "drop"
+        inventory[item_wanted] = num_in_inv - num_wanted
     
 print ("You have:")    
 for item_inv in inventory:
