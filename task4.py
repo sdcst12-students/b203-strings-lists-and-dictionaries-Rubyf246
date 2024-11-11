@@ -10,8 +10,17 @@ def squares(n):
     # n should be an integer value
     # x will be the generated dictionary
     x={}
+    for i in range(n-1):
+        ky = i+1
+        sqr = ky**2
+       # print(ky)
+        x[ky] = sqr 
+        
+    print (x)
     # your code goes here
     return x
 
 assert squares(8) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
 assert squares(10) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+#y = int(input("Enter an integer: "))
