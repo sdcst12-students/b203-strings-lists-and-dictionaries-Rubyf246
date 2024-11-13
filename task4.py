@@ -14,7 +14,7 @@ def squares(n):
         ky = i+1
         sqr = ky**2
        # print(ky)
-        x[ky] = sqr 
+        x[ky] = sqr #add a key value pair to dictionary 
         
     print (x)
     # your code goes here
